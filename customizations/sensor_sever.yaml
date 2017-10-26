@@ -1,0 +1,13 @@
+
+sensor.fibaro_system_fgms001_motion_sensor_temperature:
+  friendly_name: Temperatur
+sensor.fibaro_system_fgms001_motion_sensor_luminance:
+  friendly_name: Lux
+binary_sensor.fibaro_system_fgms001_motion_sensor_sensor:
+  friendly_name: Rörelse
+  icon: mdi:run-fast
+sensor.fibaro_system_fgms001_motion_sensor_general:
+  friendly_name: Vibration 
+  icon: mdi:access-point
+light.e27_1:
+  friendly_name: Lampa hylla

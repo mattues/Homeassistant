@@ -1,0 +1,6 @@
+light.hue_white_lamp_2:
+  friendly_name: Taklampa
+  icon: mdi:lightbulb-on-outline
+input_slider.bedroom_dimming:
+  friendly_name: Matbord ljusstyrka
+  icon: mdi:lightbulb-outline

@@ -1,0 +1,4 @@
+view: yes
+entities:
+ - group.outdoor_weather
+ - group.väder_lokalt

@@ -1,0 +1,13 @@
+sensor.mattuesoitz_battery_level:
+  friendly_name: Mattias Iphone
+ # icon: mdi:battery
+sensor.mattuesoitz_battery_state:
+  friendly_name: Status Mattias Iphone
+  #icon: mdi:cellphone-iphone
+sensor.ru_battery_state:
+  friendly_name: Status Marie Iphone
+sensor.ru_battery_level:
+  friendly_name: Marie Iphone
+sensor.batteri_ipad:
+  friendly_name: Ipad
+  icon: mdi:battery

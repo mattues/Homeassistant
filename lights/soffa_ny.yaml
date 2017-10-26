@@ -1,0 +1,10 @@
+- platform: mqtt
+  name: 'vardagsrum rgb'
+  state_topic: 'soffa/rgb1/light/status'
+  command_topic: 'soffa/rgb1/light/switch'
+  brightness_state_topic: 'soffa/rgb1/brightness/status'
+  brightness_command_topic: 'soffa/rgb1/brightness/set'
+  rgb_state_topic: 'soffa/rgb1/rgb/status'
+  rgb_command_topic: 'soffa/rgb1/rgb/set'
+  brightness_scale: 100
+  optimistic: false

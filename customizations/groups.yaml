@@ -1,0 +1,14 @@
+group.default_view:
+  order: 1
+group.familj:
+  order: 2
+group.ljus:
+  order: 3
+group.media:
+  order: 4
+group.alarm:
+  order: 5
+group.väder:
+  order: 6
+group.internet:
+  order: 7

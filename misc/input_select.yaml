@@ -1,0 +1,50 @@
+mattias_status:
+  name: Mattias Status
+  options:
+   - "Hemma"
+   - "Arbete"
+   - "Ute"
+   - "Sover"
+  initial: "Hemma"
+####
+marie_status:
+  name: Marie Status
+  options:
+   - "Hemma"
+   - "Arbete"
+   - "Ute"
+   - "Sover"
+  initial: "Hemma"
+  
+tak_ledstrip_effect:
+  name: Tak LED Effect
+  options:
+   - "BPM"
+   - "Candy Cane"
+   - "Confetti"
+   - "Cyclon Rainbow"
+   - "Dots"
+   - "Fire"
+   - "Glitter"
+   - "Juggle"
+   - "Lightning"
+   - "Noise"
+   - "Police All"
+   - "Police One"
+   - "Rainbow"
+   - "Rainbow with Glitter"
+   - "Ripple"
+   - "Sinelon"
+   - "Solid"
+   - "Twinkle"
+  initial: "Solid"
+#avr_input:
+#  name: AVR Input
+#  options:
+#  - Chromecast
+#  - KODI
+#  - HA
+#  - PC
+#  - Standby
+#  initial: Standby
+#  icon: mdi:TV

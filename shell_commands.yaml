@@ -1,0 +1,2 @@
+backup_dropbox: sudo python ./dropbox.py upload /home/homeassistant/.homeassistant /HA                                                                                                                               eassistant/.homeassistant /home/HA
+

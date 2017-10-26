@@ -1,0 +1,5 @@
+entities:
+  - name: Multi-Room
+    url: http://192.168.2.101:6680
+  - name: Pi-hole 
+    url: http://192.168.2.117/admin

@@ -1,0 +1,15 @@
+view: yes
+entities:
+ - device_tracker.mattuesoitz
+ - device_tracker.ru
+ - group.vardagsrum
+ - group.novas_rum
+ - group.serverrum
+ - group.tid_distanser
+ - camera.camvd
+ - camera.garaget
+ -  group.tradgard
+ - group.tak_ledstrip
+ - group.garage
+ - group.badrum
+ - light.soffa_rgb

@@ -1,0 +1,18 @@
+- platform: google_travel_time
+  name: Mattias minuter från HEM
+  api_key: !secret google_travel
+  origin: device_tracker.mattuesoitz
+  destination: zone.home
+  
+- platform: google_travel_time
+  name: Mattias minuter från TOTALEL
+  api_key: !secret google_travel
+  origin: device_tracker.mattuesoitz
+  destination: zone.totalel
+  
+- platform: google_travel_time
+  name: Marie minuter från HEM
+  api_key: !secret google_travel
+  origin: device_tracker.ru
+  destination: zone.home
+

@@ -1,0 +1,5 @@
+- name: Jagersro
+  latitude: 55.569865
+  longitude: 13.065210
+  radius: 150
+  icon: mdi:briefcase

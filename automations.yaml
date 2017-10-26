@@ -1,0 +1,262 @@
+- id: a_kitchen_sleeping_night
+  alias: kitchen lights night
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: sun.sun
+    to: below_horizon
+  condition:
+  - condition: time
+    before: 06:30:00
+    after: '23:00:00'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id:
+      - light.hue_white_lamp_2
+      brightness: 50
+      transition: 2
+- id: a_ledstrip_hastighet
+  alias: Ledstrip Animation Speed
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - entity_id: input_slider.led_strip_animation_speed
+    platform: state
+  action:
+  - data_template:
+      payload_template: '{{ (''trigger.to_state.state'') | int }}'
+      topic: bruh/porch/set
+    service: mqtt.publish
+- id: a_markis_on_home
+  alias: markiser on vid home
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: device_tracker.mattuesoitz
+    from: not_home
+    to: home
+  - platform: state
+    entity_id: device_tracker.ru
+    from: not_home
+    to: home
+  action:
+  - service: switch.turn_on
+    entity_id: switch.markis
+- id: a_markiser_av
+  alias: markiser av vid away
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: group.all_devices
+    from: home
+    to: not_home
+  action:
+  - service: script.markiser_av
+- id: a_motion_serverroom
+  alias: motion_serverroom
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_2_0
+    platform: state
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.motion_serverroom
+- id: allt av_via_iphone
+  alias: allt av via iphone
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: sensor.mattuesoitz_battery_state
+    from: Unplugged
+    to: Charging
+  action:
+  - service: script.off_iphone_charge
+- id: a_sunrise
+  alias: sunrise
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - event: sunrise
+    platform: sun
+  action:
+  - data:
+      entity_id:
+      - switch.philips_ledklot
+    service: switch.turn_off
+  - data:
+      entity_id:
+      - light.soffa_rgb
+      - light.mqtt_rgbw_light
+      - light.tak_strip
+    service: light.turn_off
+- id: a_sunset
+  alias: globe sunset
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - event: sunset
+    offset: -00:25:00
+    platform: sun
+  action:
+  - data:
+      entity_id:
+      - switch.philips_ledklot
+    service: switch.turn_on
+  - data:
+      entity_id:
+      - light.golvlampa_nere
+      - light.golvlampa_uppe
+    service: light.turn_on
+  - data:
+      brightness: 255
+      entity_id:
+      - light.soffa_rgb
+      rgb_color:
+      - 200
+      - 12
+      - 0
+      transition: 2
+    service: light.turn_on
+  - data:
+      brightness: 255
+      entity_id:
+      - light.rgb_monitor
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      transition: 2
+    service: light.turn_on
+- id: a_update_available
+  alias: Update notifications
+  trigger:
+  - platform: state
+    entity_id: updater.updater
+  action:
+  - service: notify.mattues
+    data_template:
+      message: Home Assistant version {{ states('updater.updater') }} is now available.
+- id: marie_away
+  alias: marie away
+  trigger:
+  - platform: state
+    entity_id: device_tracker.ru
+    from: home
+    to: not_home
+  action:
+    service: notify.mattues
+    data:
+      message: "Marie har l\xE4mnat huset!"
+- id: marie_hemma
+  alias: marie hemma
+  trigger:
+  - platform: state
+    entity_id: device_tracker.ru
+    from: not_home
+    to: home
+  action:
+    service: notify.mattues
+    data:
+      message: "Marie \xE4r hemma!"
+- id: mattias_away
+  alias: mattias away
+  trigger:
+  - platform: state
+    entity_id: device_tracker.mattuesoitz
+    from: home
+    to: not_home
+  action:
+    service: notify.mattues
+    data:
+      message: "Mattias har l\xE4mnat huset!"
+- id: mattias_hemma
+  alias: mattias hemma
+  trigger:
+  - platform: state
+    entity_id: device_tracker.mattuesoitz
+    from: not_home
+    to: home
+  action:
+    service: notify.mattues
+    data:
+      message: "Mattias \xE4r hemma!"
+- id: a_golvlampa av 00:30
+  alias: golvlampa av 00:30
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - at: 01:00:00
+    platform: time
+  action:
+  - data:
+      entity_id:
+      - light.golvlampa_nere
+      - light.rgb_monitor
+      - light.golvlampa_uppe
+    service: light.turn_off
+- id: a_switch warmwhite sink
+  alias: swich warmwhite sink
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: switch.everspring_an179_in_wall_onoff_module
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.warmwhite_sink
+- id: a_switch warmwhite sink off
+  alias: swich warmwhite sink off
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: switch.everspring_an179_in_wall_onoff_module
+    from: 'on'
+    to: 'off'
+  action:
+  - service: light.turn_off
+    data:
+      entity_id:
+      - light.mqtt_rgbw_light
+- action:
+  - data: {}
+    service: script.appletv_pause
+  alias: AppleTv Lights Pause
+  condition:
+  - after: sunset
+    before: sunrise
+    condition: sun
+  - after: '18:00:00'
+    before: 03:00:00
+    condition: time
+  id: '1503346935000'
+  trigger:
+  - entity_id: media_player.vardagsrum
+    from: playing
+    platform: state
+    to: paused
+- action:
+  - data: {}
+    service: script.appletv_play
+  alias: 'AppleTv Lights Play '
+  condition:
+  - after: sunset
+    before: sunrise
+    condition: sun
+  - after: '18:00:00'
+    before: 03:00:00
+    condition: time
+  id: '1503429425476'
+  trigger:
+  - entity_id: media_player.vardagsrum
+    from: paused
+    platform: state
+    to: playing

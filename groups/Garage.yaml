@@ -1,0 +1,7 @@
+
+- sensor.temperatur
+- sensor.fuktighet
+- sensor.sn1_ldr
+- sensor.sn1_pir
+- sensor.sn1_real_feel
+- light.mqtt_rgbw_light_2

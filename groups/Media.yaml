@@ -1,0 +1,6 @@
+view: yes
+entities:
+ - group.media_spelare
+ - group.forcering
+ - group.logitech_ljud
+ - group.samsung_tv

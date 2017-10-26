@@ -1,0 +1,8 @@
+- platform: rfxtrx
+  automatic_add: True
+  signal_repetitions: 2
+  devices:
+    0b11000001517ba202010f80:
+      name: Markis 
+    0b11000a01517ba201010f70:
+      name: Philips LedKlot

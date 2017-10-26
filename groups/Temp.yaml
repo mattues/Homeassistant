@@ -1,0 +1,5 @@
+view: yes
+entities:
+ - group.badrum
+ - group.temp_vardagsrum
+ - group.temp_server_rum

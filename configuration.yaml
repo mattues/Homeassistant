@@ -1,0 +1,98 @@
+homeassistant:
+  name: Hemma
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 12
+  unit_system: metric
+  time_zone: Europe/Stockholm
+  customize: !include_dir_merge_named customizations
+  
+frontend:
+zeroconf:
+config:
+
+http:
+  api_password: !secret http_api_password
+  #ssl_certificate: !secret http_ssl_certificate
+  #ssl_key: !secret http_ssl_key
+
+  
+
+updater:
+discovery:
+conversation:
+history:
+  exclude:
+    domains:
+      - automation
+    entities:
+      - sensor.date_time
+      - sensor.ha_uptime
+      - sensor.since_last_boot
+      - sun.sun
+logbook:
+  exclude:
+    domains:
+      - automation
+    entities:
+      - sensor.date_time
+      - sensor.ha_uptime
+      - sensor.since_last_boot
+      - sun.sun
+sun:
+ios:
+tts:
+  platform: google
+recorder: 
+  purge_interval: 3
+  purge_keep_days: 2
+  
+
+rfxtrx:
+  device: /dev/serial/by-id/usb_RFXCOM_RFXtrx433_A11SUCSO-if00-port0
+zwave:
+  usb_path: /dev/ttyACM0
+  config_path: /srv/homeassistant/lib/python3.5/site-packages/python_openzwave/ozw_config
+  device_config: !include zwave_device_config.yaml
+  new_entity_ids: true
+
+mqtt:
+  broker: 192.168.2.101
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  discovery: true
+
+tradfri:
+  host: 192.168.2.104
+  api_key: !secret tradfri
+#hdmi_cec:
+#  devices:
+#    Samsung TV: 0.0.0.0
+#    Apple TV: 3.0.0.0
+#    Pi 3: 2.0.0.0
+#    Pi Zero: 4.0.0.0
+
+
+
+scene: !include_dir_merge_list scenes/
+switch: !include switches.yaml
+cover: !include covers.yaml
+#input_boolean: !include misc/input_booleans.yaml
+light: !include_dir_merge_list lights/
+input_number: !include misc/input_number.yaml
+notify: !include notify.yaml
+sensor: !include_dir_merge_list sensors/
+group: !include_dir_named groups
+device_tracker: !include device_trackers.yaml
+media_player: !include media_players.yaml
+#weblink: !include weblink.yaml
+automation: !include automations.yaml
+zone: !include_dir_merge_list zones
+script: !include_dir_merge_named scripts/
+#input_select: !include misc/input_select.yaml
+camera: !include_dir_merge_list cameras/
+#binary_sensor: !include binary_sensors.yaml
+#shell_command: !include shell_commands.yaml

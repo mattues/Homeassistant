@@ -1,0 +1,7 @@
+light.hue_white_lamp_1:
+  friendly_name: Badrum allmän
+  icon: mdi:lightbulb-on-outline
+
+input_slider.bathroom_dimming:
+  friendly_name: Badrum ljusstyrka
+  icon: mdi:lightbulb-outline

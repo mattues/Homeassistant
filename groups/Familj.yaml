@@ -1,0 +1,8 @@
+view: yes
+entities:
+ - device_tracker.mattuesoitz
+ - device_tracker.ru
+ - group.batteri_apple
+ - camera.mattias
+ - camera.marie
+ 

@@ -1,0 +1,13 @@
+#- platform: html5
+#  name: Mattues
+#  gcm_api_key: AAAATPmLltg:APA91bGtSbXp3FKGWTNQ1pNWQbs5tCRxAj22v-fkaCZ71HfwOQuFtIW4TbufJJ2PqqmtXpvdmwh-CmtfNqxVKPrdVeisgUTWr4AthMEpcxnkV_AZ77cAC0TDcmVFlQEOIDEyUAiBbrEr
+#  gcm_sender_id: 330604189400
+#- platform: pushbullet
+#  name: mattues
+#  api_key: o.zougg41mQh4bCmmHxzazAFXSbt5rPfYm
+- platform: pushetta
+  name: mattues
+  api_key: 5c89773dcc89fb7752a72ddf034c96626a269f0a
+  channel_name: hassbian
+
+ 

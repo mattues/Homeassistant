@@ -1,0 +1,9 @@
+motion_serverroom_timer:
+  sequence:
+  - delay:
+      minutes: 10
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.e27_1
+      transition: 10

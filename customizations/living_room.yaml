@@ -1,0 +1,26 @@
+binary_sensor.__sensor_2_0:
+  friendly_name: Närvaro
+  icon: mdi:run-fast
+sensor.fibaro_system_fgms001_motion_sensor_luminance_2_3:
+  friendly_name: Lux
+  icon: mdi:white-balance-sunny
+sensor.fibaro_system_fgms001_motion_sensor_temperature_2_1:
+  friendly_name: Temperatur
+  icon: mdi:thermometer
+sensor.fibaro_system_fgms001_motion_sensor_general_2_0:
+  friendly_name: Vibration
+  icon: mdi:vibrate
+media_player.samsung_tv_remote:
+  friendly_name: Samsung TV
+#switch.fibaro_system_fgwpef_wall_plug_gen5_switch_3_0:
+ # icon: mdi:power
+ # friendly_name: TV
+#switch.fibaro_system_fgwpef_wall_plug_gen5_switch_4_0:
+#  friendly_name: Philips globe
+#  icon: mdi:lightbulb-on-outline
+switch.philips_ledklot:
+  friendly_name: Led Klot
+  icon: mdi:lightbulb-on-outline
+sensor.broadlink_sensor_temperature:
+  friendly_name: Temperatur
+  icon: mdi:thermometer

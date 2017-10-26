@@ -1,0 +1,12 @@
+sensor.temperatur_bad:
+  friendly_name: Temp
+sensor.fuktighet: 
+  friendly_name:  Moist
+sensor.sn1_ldr:
+  friendly_name: Lux
+sensor.sn1_pir:
+  friendly_name: Rörelse
+sensor.sn1_real_feel:
+  friendly_name: Känns som 
+light.RGB_Monitor:
+  friendly_name: RGB TV

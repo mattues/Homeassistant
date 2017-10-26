@@ -1,0 +1,41 @@
+  #These IR scripts are written so that HASS dashboard will display a one-shot "activate" button for these 'dumbfire' IR blasts (instead of a displaying a toggle for a smartdevice, which would falsely imply a known state of on/off for each action)
+  logitech_volume_up:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.volym_upp_logitech
+  logitech_volume_down:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.volym_ner_logitech
+  logitech_effect:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.effect_logitech
+  logitech_input:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.input_logitech
+  logitech_on:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.on_logitech
+  logitech_off:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.off_logitech
+  samsung_source:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.source_samsung
+  samsung_volume_down:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.ner_samsung
+  samsung_channel_up:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.kanal_upp
+  samsung_channel_down: 
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.kanal_ner

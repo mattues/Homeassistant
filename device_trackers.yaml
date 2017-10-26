@@ -1,0 +1,3 @@
+#- platform: owntracks
+#- platform: locative
+#- platform: bluetooth_le_tracker

@@ -1,0 +1,62 @@
+
+    script.logitech_volume_up:
+        friendly_name: "Volym Upp"
+        icon: mdi:volume-plus
+        assumed_state: false        
+    script.logitech_volume_down:
+        friendly_name: "Volym Ner"
+        icon: mdi:volume-minus
+    script.logitech_on:
+        friendly_name: "Standby"
+        icon: mdi:power
+    script.logitech_input:
+        friendly_name: "Input"
+        icon: mdi:settings-box
+    script.logitech_effect:
+        friendly_name: "Mode"
+        icon: mdi:speaker-wireless
+    script.samsung_source:
+        friendly_name: "Källa"
+        icon: mdi:settings-box
+    script.samsung_channel_up:
+        friendly_name: "Kanal UPP"
+        icon: mdi:arrow-up-thick
+    script.samsung_channel_down:
+        friendly_name: "Kanal NER"
+        icon: mdi:arrow-down-thick        
+    
+        
+
+    #Hidden items
+    switch.volym_ner_samsung:
+        icon: mdi:volume-minus
+        assumed_state: false
+        hidden: true
+    switch.volym_upp_samsung:
+        icon: mdi:volume-plus
+        assumed_state: false
+        hidden: true
+    switch.ac_fan_speed:
+        icon: mdi:fan
+        assumed_state: false
+        hidden: true
+    switch.ac_mode:
+        icon: mdi:settings-box
+        assumed_state: false
+        hidden: true
+    switch.ac_timer:
+        icon: mdi:av-timer
+        assumed_state: false
+        hidden: true
+    switch.livingroom_amp_vol_up:
+        icon: mdi:volume-plus
+        assumed_state: false
+        hidden: true
+    switch.livingroom_amp_vol_down:
+        icon: mdi:volume-minus
+        assumed_state: false
+        hidden: true
+    switch.livingroom_amp_bass_boost_eq:
+        icon: mdi:speaker-wireless
+        assumed_state: false
+        hidden: true

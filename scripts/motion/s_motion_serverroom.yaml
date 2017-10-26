@@ -1,0 +1,14 @@
+motion_serverroom:
+  sequence:
+  - service: script.turn_off
+    data:
+      entity_id: script.motion_serverroom_timer
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.e27_1
+      brightness: 40
+      transition: 2
+  - service: script.turn_on
+    data:
+      entity_id: script.motion_serverroom_timer

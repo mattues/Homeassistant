@@ -1,0 +1,11 @@
+- platform: mqtt_json
+  name: Soffa rgb
+  state_topic: "home/rgb1"
+  command_topic: "home/rgb1/set"
+  brightness: true
+  effect: true
+  rgb: true
+  flash: true
+  optimistic: false
+  qos: 0
+

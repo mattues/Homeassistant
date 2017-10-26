@@ -1,0 +1,14 @@
+- sensor.ha_installed_version
+- sensor.ha_uptime
+- sensor.since_last_boot
+- sensor.last_boot
+- sensor.ram_free
+- sensor.cpu_use
+- sensor.disk_free_home
+- sensor.ipv4_address_eth0
+#- sensor.fibaro_system_fgwpef_wall_plug_gen5_power_2
+#- sensor.fibaro_system_fgwpef_wall_plug_gen5_power_3
+#- sensor.fibaro_system_fgwpef_wall_plug_gen5_energy
+#- sensor.fibaro_system_fgwpef_wall_plug_gen5_energy_2
+#- switch.fibaro_system_fgwpef_wall_plug_gen5_switch_2
+#- switch.fibaro_system_fgwpef_wall_plug_gen5_switch_3

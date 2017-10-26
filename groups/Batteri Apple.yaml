@@ -1,0 +1,5 @@
+- sensor.mattuesoitz_battery_state
+- sensor.mattuesoitz_battery_level
+- sensor.ru_battery_state
+- sensor.ru_battery_level
+- sensor.batteri_ipad

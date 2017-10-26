@@ -1,0 +1,18 @@
+- platform: darksky
+  api_key: !secret darksky_api
+  monitored_conditions:
+    - summary
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - wind_speed
+    - humidity
+    - icon
+
+- platform: wunderground
+  api_key: !secret wundergrund
+  monitored_conditions:
+    - alerts
+    - elevation
+    - location
+    - station_id

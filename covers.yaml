@@ -1,0 +1,6 @@
+- platform: rfxtrx
+  automatic_add: False
+  signal_repetitions: 1
+  devices:
+   071a000001020301:
+     name: Markis 

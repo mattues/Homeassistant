@@ -1,0 +1,13 @@
+- platform: mqtt_json
+  name: MQTT RGBW Light
+  state_topic: "378AEF/rgbw/state"
+  command_topic: "378AEF/rgbw/set"
+  brightness: true
+  effect: true
+  effect_list:
+    - Rainbow
+  rgb: true
+  white_value: true
+  color_temp: true
+  optimistic: false
+  qos: 0

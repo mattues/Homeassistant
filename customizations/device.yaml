@@ -1,0 +1,27 @@
+device_tracker.ru:
+  friendly_name: Marie Iphone
+  entity_picture: /local/marie.jpg
+       
+device_tracker.mattues_ipad:
+  friendly_name: Ipad
+  icon: mdi:phone
+       
+device_tracker.mattuesoitz:
+  friendly_name: Mattias Iphone
+  entity_picture: /local/mattias.jpg
+  
+sensor.marie_minuter_fran_hem:
+  friendly_name: Marie minuter hemifrån
+  icon: mdi:home
+  
+sensor.mattias_minuter_fran_hem:
+  friendly_name: Mattias minuter hemifrån
+  icon: mdi:home
+  
+sensor.mattias_minuter_fran_totalel:
+  friendly_name: Mattias minuter från TotalEl
+  icon: mdi:briefcase
+  
+cover.markis:
+  friendly_name: Markis Trädgård
+  

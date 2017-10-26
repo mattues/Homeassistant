@@ -1,0 +1,16 @@
+- platform: samsungtv
+  host: 192.168.2.150
+- platform: apple_tv
+  host: 19.168.2.105
+  login_id: !secret apple
+- platform: plex
+  host: 192.168.2.110
+  port: 32400
+- platform: spotify
+  client_id: !secret client_spotify
+  client_secret: !secret spotify_secret
+- platform: snapcast
+  host: 192.168.2.116
+- platform: mpd
+  host: 192.165.2.116
+  port: 6602

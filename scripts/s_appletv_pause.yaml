@@ -1,0 +1,8 @@
+appletv_pause:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.golvlampa_uppe light.golvlampa_nere
+        brightness: 190
+        white_value: 255
+        transition: 5

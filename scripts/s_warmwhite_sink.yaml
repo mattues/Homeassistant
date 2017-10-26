@@ -1,0 +1,8 @@
+warmwhite_sink:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.mqtt_rgbw_light
+        brightness: 255
+        white_value: 255
+        transition: 10

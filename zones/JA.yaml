@@ -1,0 +1,5 @@
+- name: Johnny & Anita
+  latitude: 55.614979
+  longitude: 13.061375
+  radius: 150
+  icon: mdi:home

@@ -1,0 +1,5 @@
+- platform: broadlink
+  host: 192.168.2.103
+  mac: 'B4:43:0D:38:FB:34'
+  monitored_conditions:
+    - 'temperature'

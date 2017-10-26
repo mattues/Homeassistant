@@ -1,0 +1,3 @@
+      - platform: mqtt
+        name: 'TV'
+        state_topic: 'livingroom/tv/status'

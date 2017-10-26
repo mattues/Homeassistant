@@ -1,0 +1,14 @@
+motion_day:
+  sequence:
+  - service: script.turn_off
+    data:
+      entity_id: script.motion_sleeping_night_timer
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.hue_white_lamp_1
+      brightness: 300
+      transition: 2
+  - service: script.turn_on
+    data:
+      entity_id: script.motion_day_timer

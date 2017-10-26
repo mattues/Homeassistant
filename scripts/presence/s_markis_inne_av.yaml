@@ -1,0 +1,8 @@
+markis_inne_av:
+  sequence:
+  - delay:
+      minutes: 1
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.markis

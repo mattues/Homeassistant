@@ -1,0 +1,12 @@
+markiser_av:
+  sequence:
+  - service: script.turn_off
+    data:
+      entity_id: script.markis_inne_av
+  - service: cover.open_cover
+    data:
+      entity_id:
+        - cover.markis
+  - service: script.turn_on
+    data:
+      entity_id: script.markis_inne_av

@@ -1,0 +1,10 @@
+- platform: generic
+  name: CamVd
+  still_image_url: !secret camera_host
+  username: !secret camera_username
+  password: !secret camera_password
+  
+- platform: mjpeg
+  name: Garaget
+  mjpeg_url: !secret garage_cam 
+  

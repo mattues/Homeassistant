@@ -1,0 +1,10 @@
+sensor.ha_installed_version:
+  friendly_name: 'HA Version'
+  icon: mdi:laptop-chromebook
+
+
+
+
+sensor.ha_uptime:
+  friendly_name: 'HA Uppe'
+  icon: mdi:laptop-chromebook

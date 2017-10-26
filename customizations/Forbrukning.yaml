@@ -1,0 +1,24 @@
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power: 
+  friendly_name: Nuvarande förbrukning Raspberry
+  icon: mdi:flash
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_2:
+  friendly_name: Genomsnitt Raspberry
+  icon: mdi:flash
+sensor.fibaro_system_fgwpef_wall_plug_gen5_energy:
+  friendly_name: Totalt Kwh Raspberry
+  icon: mdi:flash
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_3: 
+  friendly_name: Nuvarande förbrukning Pi Zero
+  icon: mdi:flash
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_4:
+  friendly_name: Genomsnitt Pi Zero
+  icon: mdi:flash
+sensor.fibaro_system_fgwpef_wall_plug_gen5_energy_2:
+  friendly_name: Totalt Kwh Pi Zero
+  icon: mdi:flash
+switch.fibaro_system_fgwpef_wall_plug_gen5_switch_2:
+  friendly_name: Raspberry Homeassistant Killswitch
+  icon: mdi:desktop-classic
+switch.fibaro_system_fgwpef_wall_plug_gen5_switch_3:
+  friendly_name: Pi Zero Killswitch
+  icon: mdi:desktop-classic
