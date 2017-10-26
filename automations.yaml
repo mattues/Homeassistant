@@ -200,6 +200,7 @@
       - light.golvlampa_nere
       - light.rgb_monitor
       - light.golvlampa_uppe
+      - light.pendel_soffbord
     service: light.turn_off
 - id: a_switch warmwhite sink
   alias: swich warmwhite sink
@@ -227,16 +228,30 @@
       entity_id:
       - light.mqtt_rgbw_light
 - action:
-  - data: {}
-    service: script.appletv_pause
+  - data:
+      entity_id:
+      - light.golvlampa_uppe
+      - light.golvlampa_nere
+      - light.pendel_soffbord
+    service: light.turn_on
+  - alias: uppe
+    data:
+      brightness: 110
+      color_temp: 458.50527281063734
+      entity_id: light.golvlampa_uppe
+      transition: 5
+    service: light.turn_on
+  - alias: nere
+    data:
+      brightness: 110
+      color_temp: 458.50527281063734
+      entity_id: light.golvlampa_nere
+      transition: 5
+    service: light.turn_on
   alias: AppleTv Lights Pause
   condition:
   - after: sunset
-    before: sunrise
     condition: sun
-  - after: '18:00:00'
-    before: 03:00:00
-    condition: time
   id: '1503346935000'
   trigger:
   - entity_id: media_player.vardagsrum
@@ -244,16 +259,16 @@
     platform: state
     to: paused
 - action:
-  - data: {}
-    service: script.appletv_play
+  - data:
+      entity_id:
+      - light.golvlampa_uppe
+      - light.golvlampa_nere
+      - light.pendel_soffbord
+    service: light.turn_off
   alias: 'AppleTv Lights Play '
   condition:
   - after: sunset
-    before: sunrise
     condition: sun
-  - after: '18:00:00'
-    before: 03:00:00
-    condition: time
   id: '1503429425476'
   trigger:
   - entity_id: media_player.vardagsrum
