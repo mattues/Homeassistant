@@ -8,8 +8,9 @@ entities:
  - group.tid_distanser
  - camera.camvd
  - camera.garaget
- -  group.tradgard
+ - group.tradgard
  - group.tak_ledstrip
  - group.garage
  - group.badrum
  - light.soffa_rgb
+ - group.all_automations

@@ -229,10 +229,9 @@
       - light.mqtt_rgbw_light
 - action:
   - data:
-      entity_id:
-      - light.golvlampa_uppe
-      - light.golvlampa_nere
-      - light.pendel_soffbord
+      brightness: 110
+      entity_id: light.pendel_soffbord
+      transistion: 5
     service: light.turn_on
   - alias: uppe
     data:
@@ -260,11 +259,22 @@
     to: paused
 - action:
   - data:
-      entity_id:
-      - light.golvlampa_uppe
-      - light.golvlampa_nere
-      - light.pendel_soffbord
-    service: light.turn_off
+      brightness: 10
+      color_temp: 458.50527281063734
+      entity_id: light.golvlampa_uppe
+      transition: 5
+    service: light.turn_on
+  - data:
+      brightness: 10
+      color_temp: 458.50527281063734
+      entity_id: light.golvlampa_nere
+      transition: 5
+    service: light.turn_on
+  - data:
+      brightness: 10
+      entity_id: light.pendel_soffbord
+      transition: 5
+    service: light.turn_on
   alias: 'AppleTv Lights Play '
   condition:
   - after: sunset
