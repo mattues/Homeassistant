@@ -9,8 +9,8 @@ entities:
  - camera.camvd
  - camera.garaget
  - group.tradgard
- - group.tak_ledstrip
  - group.garage
- - group.badrum
+ - group.lilla_badrummet
+ - light.mqtt_rgbw_light_2
+ - light.mqtt_rgbw_light
  - light.soffa_rgb
- - group.all_automations

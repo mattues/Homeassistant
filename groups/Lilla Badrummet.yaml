@@ -1,0 +1,5 @@
+- sensor.fibaro_system_fgms001_motion_sensor_temperature
+- sensor.fibaro_system_fgms001_motion_sensor_luminance
+- light.fibaro_system_fgd212_dimmer_2_level
+- binary_sensor.fibaro_system_fgms001_motion_sensor_sensor
+- sensor.fibaro_system_fgms001_motion_sensor_general

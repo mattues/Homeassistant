@@ -6,8 +6,8 @@ motion_sleeping_night:
   - service: light.turn_on
     data:
       entity_id:
-        - light.hue_white_lamp_2
-      brightness: 35
+        - light.fibaro_system_fgd212_dimmer_2_level
+      brightness: 100
       transition: 20
   - service: script.turn_on
     data:

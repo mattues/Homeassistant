@@ -1,7 +1,7 @@
-light.hue_white_lamp_1:
-  friendly_name: Badrum allmän
+light.fibaro_system_fgd212_dimmer_2_level:
+  friendly_name: Badrum Takspots
   icon: mdi:lightbulb-on-outline
 
-input_slider.bathroom_dimming:
+input_number.bathroom_dimming:
   friendly_name: Badrum ljusstyrka
   icon: mdi:lightbulb-outline

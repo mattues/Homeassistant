@@ -1,3 +1,7 @@
 #- platform: owntracks
 #- platform: locative
 #- platform: bluetooth_le_tracker
+ - platform: asuswrt
+   host: !secret asushost
+   username: !secret asusname
+   password: !secret asuspass

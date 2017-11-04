@@ -1,13 +1,9 @@
 off_iphone_charge:
   sequence:
-    - condition: time
-      after: '01:30:00'
-      before: '05:00:00'
     - service: light.turn_off
       data:
         entity_id: 
         - light.soffa_rgb
-        - light.mqtt_rgbw_light
         - light.golvlampa_nere
         - light.golvlampa_uppe
     - service: media_player.turn_off

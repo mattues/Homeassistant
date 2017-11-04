@@ -1,5 +1,5 @@
 bathroom_dimming:
-  name: Badrum allmän
+  name: Badrum takspots
   initial: 300
   min: 1
   max: 300

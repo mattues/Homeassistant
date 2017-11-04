@@ -1,7 +1,7 @@
 - platform: mqtt_json
   name: Tak Strip
-  state_topic: "bruh/porch"
-  command_topic: "bruh/porch/set"
+  state_topic: "esp/state"
+  command_topic: "esp/set"
   effect: true
   effect_list:
     - bpm

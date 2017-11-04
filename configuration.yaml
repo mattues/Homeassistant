@@ -10,16 +10,17 @@ homeassistant:
 frontend:
 zeroconf:
 config:
+map:
 
 http:
   api_password: !secret http_api_password
-  #ssl_certificate: !secret http_ssl_certificate
-  #ssl_key: !secret http_ssl_key
+  ssl_certificate: !secret http_ssl_certificate
+  ssl_key: !secret http_ssl_key
 
   
 
 updater:
-discovery:
+#discovery:
 conversation:
 history:
   exclude:
@@ -67,7 +68,7 @@ mqtt:
 
 tradfri:
   host: 192.168.2.104
-  api_key: !secret tradfri
+  
 #hdmi_cec:
 #  devices:
 #    Samsung TV: 0.0.0.0

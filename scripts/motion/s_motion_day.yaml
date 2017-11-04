@@ -2,13 +2,13 @@ motion_day:
   sequence:
   - service: script.turn_off
     data:
-      entity_id: script.motion_sleeping_night_timer
+      entity_id: script.motion_sleeping_night
   - service: light.turn_on
     data:
       entity_id:
-        - light.hue_white_lamp_1
-      brightness: 300
-      transition: 2
+        - light.fibaro_system_fgd212_dimmer
+      brightness: 70
+      transition: 10
   - service: script.turn_on
     data:
       entity_id: script.motion_day_timer

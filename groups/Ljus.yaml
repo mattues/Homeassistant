@@ -1,8 +1,5 @@
 view: yes
 entities:
- - group.enheter_vardagsrum
- - group.novas_rum
- - group.vardagsrum
- - group.server_rum
- - group.kok
- - group.tak_ledstrip
+ - group.vardagsrum_ljus
+ - group.serverrum
+ - group.garage_ljus

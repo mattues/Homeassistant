@@ -12,5 +12,5 @@
 - platform: snapcast
   host: 192.168.2.116
 - platform: mpd
-  host: 192.165.2.116
-  port: 6602
+  host: 192.165.2.119
+  port: 6600

@@ -22,10 +22,13 @@
   initial_state: true
   hide_entity: false
   trigger:
-  - entity_id: input_slider.led_strip_animation_speed
-    platform: state
+  - platform: template
+    value_template: trigger.to_state.state | int
   action:
-  - data_template:
+  - data:
+      payload: transition:{{ trigger.to_state.state | int }}
+      topic: esp/set
+    data_template:
       payload_template: '{{ (''trigger.to_state.state'') | int }}'
       topic: bruh/porch/set
     service: mqtt.publish
@@ -72,12 +75,16 @@
   initial_state: true
   hide_entity: false
   trigger:
-  - platform: state
-    entity_id: sensor.mattuesoitz_battery_state
+  - entity_id: sensor.mattuesoitz_battery_state
     from: Unplugged
+    platform: state
     to: Charging
   action:
   - service: script.off_iphone_charge
+  condition:
+  - after: 00:30
+    before: 07:00
+    condition: time
 - id: a_sunrise
   alias: sunrise
   initial_state: true
@@ -285,3 +292,17 @@
     from: paused
     platform: state
     to: playing
+- action:
+  - data: {}
+    service: script.motion_sleeping_night
+  alias: "Badrum kv\xE4ll/natt"
+  condition:
+  - after: '22:30'
+    before: 06:30
+    condition: time
+  id: '1509833625922'
+  trigger:
+  - entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
