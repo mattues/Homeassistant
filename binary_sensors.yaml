@@ -1,3 +1,4 @@
-      - platform: mqtt
-        name: 'TV'
-        state_topic: 'livingroom/tv/status'
+- platform: mqtt
+  name: "Badrum aktiv"
+  state_topic: "bathroom/motion/status"
+  sensor_class: motion

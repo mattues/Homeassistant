@@ -300,9 +300,12 @@
   - after: '22:30'
     before: 06:30
     condition: time
+  - after: sunset
+    before: sunrise
+    condition: sun
   id: '1509833625922'
   trigger:
   - entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor
-    from: 'off'
+    from: '22:30'
     platform: state
-    to: 'on'
+    to: 06:30

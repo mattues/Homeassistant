@@ -3,3 +3,4 @@ entities:
  - group.vardagsrum_ljus
  - group.serverrum
  - group.garage_ljus
+ - group.tak_ledstrip

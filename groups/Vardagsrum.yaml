@@ -3,3 +3,5 @@
 - sensor.tradfri_remote_control
 - light.golvlampa_nere
 - light.golvlampa_uppe
+- sensor.broadlink_sensor_temperature
+- media_player.vardagsrum

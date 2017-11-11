@@ -22,6 +22,12 @@ http:
 updater:
 #discovery:
 conversation:
+logger:
+  default: critical
+  logs:
+    homeassistant.components.rfxtrx: debug
+    homeassistant.components: info
+    
 history:
   exclude:
     domains:
@@ -48,9 +54,13 @@ recorder:
   purge_interval: 3
   purge_keep_days: 2
   
-
+apple_tv:
+  host: !secret apple
+  login_id: !secret apple_tv
+  name: Vardagsrum
 rfxtrx:
   device: /dev/serial/by-id/usb_RFXCOM_RFXtrx433_A11SUCSO-if00-port0
+  debug: true
 zwave:
   usb_path: /dev/ttyACM0
   config_path: /srv/homeassistant/lib/python3.5/site-packages/python_openzwave/ozw_config
@@ -65,7 +75,6 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
   discovery: true
-
 tradfri:
   host: 192.168.2.104
   
@@ -95,5 +104,5 @@ zone: !include_dir_merge_list zones
 script: !include_dir_merge_named scripts/
 #input_select: !include misc/input_select.yaml
 camera: !include_dir_merge_list cameras/
-#binary_sensor: !include binary_sensors.yaml
+binary_sensor: !include binary_sensors.yaml
 #shell_command: !include shell_commands.yaml

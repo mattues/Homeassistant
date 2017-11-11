@@ -4,3 +4,4 @@ entities:
  - group.forcering
  - group.logitech_ljud
  - group.samsung_tv
+ - group.mpd
